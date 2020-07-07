@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gdlglibrary">
+
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.INTERNET"/><!--连接网络权限-->
+
+    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".changebook.changebookyes" />
+        <activity android:name=".readbook.findbooks" />
+        <activity android:name=".givebackbook.backbookdone" />
+        <activity android:name=".givebackbook.backbookyes" />
+        <activity android:name=".givebackbook.givebookdone" />
+        <activity android:name=".givebackbook.selectuse" />
+        <activity android:name=".givebackbook.givebookyes" />
+        <activity android:name=".changebook.changebooks" />
+        <activity android:name=".readbook.showbooks" />
+        <activity android:name=".readbook.nullbook" />
+        <activity android:name=".changebook.gods" />
+        <activity android:name=".changebook.nogods" />
+        <activity android:name=".givebackbook.backbooks" />
+        <activity android:name=".givebackbook.givebooks" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
