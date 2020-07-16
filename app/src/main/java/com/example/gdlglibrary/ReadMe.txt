@@ -50,6 +50,14 @@
 没有成功实现
 考虑通过web实现
 
+7.13
+新下载了两个东西，在了解怎么连接的
+
+7.16
+创建本地服务器，然后手机连接本地服务器
+服务器写怎么连接数据库
+
+
 //发送数据
 	returncode = obj.getText().trim();
 	Intent result = new Intent();

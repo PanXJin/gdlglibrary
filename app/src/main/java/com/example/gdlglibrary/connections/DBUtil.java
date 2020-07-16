@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class DBUtil {
 	// URL
 //	public final static String URL="jdbc:oracle:thin:LAPTOP-F1EPT0VH:1521:orcl";
-	public final static String URL="jdbc:oracle:thin:120.239.124.7:1521:ORCL";
+	public final static String URL="jdbc:oracle:thin:localhost:1521:ORCL";
 
 	//前提启动oracle
 	public final static String USERNAME="system";//用户名
