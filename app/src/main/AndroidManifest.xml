@@ -4,9 +4,7 @@
 
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
-
-    <uses-permission android:name="android.permission.INTERNET"/><!--连接网络权限-->
-
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 连接网络权限 -->
     <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -17,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".WelcomeActivity"></activity>
         <activity android:name=".changebook.changebookyes" />
         <activity android:name=".readbook.findbooks" />
         <activity android:name=".givebackbook.backbookdone" />
