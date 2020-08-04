@@ -61,6 +61,12 @@
 了解了spring框架了，我可了
 创建了一个欢迎页面
 
+7.29
+取消了顶层app名字
+在styles。xml里面修改
+
+8.4
+增加了用户界面
 
 //发送数据
 	returncode = obj.getText().trim();

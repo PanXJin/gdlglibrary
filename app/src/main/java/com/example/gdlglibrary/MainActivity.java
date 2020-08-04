@@ -19,11 +19,23 @@ import com.example.gdlglibrary.givebackbook.selectuse;
 import com.example.gdlglibrary.readbook.findbooks;
 
 public class MainActivity extends AppCompatActivity {
-Button showbt,changebt,givebt;
+Button showbt,changebt,givebt,userbt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        userbt = findViewById(R.id.userbutton);
+        userbt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         showbt = findViewById(R.id.bt_showbook);
         showbt.setOnClickListener(new View.OnClickListener() {
             @Override

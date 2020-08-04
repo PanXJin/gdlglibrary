@@ -8,9 +8,11 @@
 
     <LinearLayout
         android:id="@+id/linearLayout8"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="80dp"
+        android:layout_weight="1"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,12 +20,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="选择业务" />
+            android:text="选择业务"
+            android:textSize="36sp" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_width="0dp"
+        android:layout_height="223dp"
+        android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,24 +35,48 @@
 
         <Button
             android:id="@+id/bt_changebook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="3"
             android:text="管理书籍" />
 
         <Button
             android:id="@+id/bt_showbook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="3"
             android:text="查看书籍" />
 
         <Button
             android:id="@+id/bt_givebook"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="3"
+            android:text="借出/归还书籍" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/mainbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="借出/归还书籍" />
+            android:text="操作" />
+
+        <Button
+            android:id="@+id/userbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="用户界面" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
