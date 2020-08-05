@@ -65,5 +65,5 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:22.1.0'
     implementation 'br.com.liveo:navigationdrawer-material:1.0.5'
-
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:1.4.3'
 }
