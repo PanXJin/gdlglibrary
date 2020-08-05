@@ -22,15 +22,15 @@ import com.example.gdlglibrary.readbook.findbooks;
 
 public class MainActivity extends AppCompatActivity {
 Button showbt,changebt,givebt,userbt,mainbt;
-//String[] mTitles = new String[]{"首页","我的"};
-//BottomNavigationBar bottomNavigationBar;
+String[] mTitles = new String[]{"首页","我的"};
+BottomNavigationBar bottomNavigationBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        bottomNavigationBar = (BottomNavigationBar)findViewById(R.id.main_Bar);
-//        initview();
+        bottomNavigationBar = (BottomNavigationBar)findViewById(R.id.main_Bar);
+        initview();
 mainbt = findViewById(R.id.mainbutton);
 mainbt.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -104,50 +104,50 @@ mainbt.setOnClickListener(new View.OnClickListener() {
                 }
         }
     }
-//    private void initview(){
-//        bottomNavigationBar
-//                .setMode(BottomNavigationBar.MODE_FIXED)
-//                .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC)
-//                .setActiveColor(R.color.colorPrimary)
-//                .setInActiveColor(R.color.orange)
-//                .addItem(new BottomNavigationItem(R.mipmap.ic_tabbar_home_pressed,mTitles[0])
-//                        .setInactiveIcon(ContextCompat.getDrawable(this,R.mipmap.ic_tabbar_home_normal))
-//                )
-//                .addItem(new BottomNavigationItem(R.mipmap.ic_tabbar_my_pressed,mTitles[1])
-//                        .setInactiveIcon(ContextCompat.getDrawable(this,R.mipmap.ic_tabbar_my_normal))
-//                )
-//                .setFirstSelectedPosition(0)
-//                .initialise();
-//        bottomNavigationBar
-//                .setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
-//            @Override
-//            public void onTabSelected(int position) {
-//                switch (position){
-//                    case 0:
-//                                                        Toast.makeText(MainActivity.this,"已经在此页面！",Toast.LENGTH_SHORT).show();
-////                        System.out.println("0!");
-////                        Intent intent = new Intent(test.this,MainActivity.class);
-////                        startActivity(intent);
-//
-//                        break;
-//                    case 1:
-////                                                        Toast.makeText(test.this,"真的有这种操作！",Toast.LENGTH_SHORT).show();
-//                        System.out.println("1!");
-//                        Intent intent1 = new Intent(MainActivity.this,LoginActivity.class);
-//                        startActivity(intent1);
-//                        break;
-//                }
-//            }
-//
-//            @Override
-//            public void onTabUnselected(int position) {
-//
-//            }
-//
-//            @Override
-//            public void onTabReselected(int position) {
-//
-//            }
-//        });
-//    }
+    private void initview(){
+        bottomNavigationBar
+                .setMode(BottomNavigationBar.MODE_FIXED)
+                .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC)
+                .setActiveColor(R.color.colorPrimary)
+                .setInActiveColor(R.color.orange)
+                .addItem(new BottomNavigationItem(R.mipmap.ic_tabbar_home_pressed,mTitles[0])
+                        .setInactiveIcon(ContextCompat.getDrawable(this,R.mipmap.ic_tabbar_home_normal))
+                )
+                .addItem(new BottomNavigationItem(R.mipmap.ic_tabbar_my_pressed,mTitles[1])
+                        .setInactiveIcon(ContextCompat.getDrawable(this,R.mipmap.ic_tabbar_my_normal))
+                )
+                .setFirstSelectedPosition(0)
+                .initialise();
+        bottomNavigationBar
+                .setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(int position) {
+                switch (position){
+                    case 0:
+                          Toast.makeText(MainActivity.this,"已经在此页面！",Toast.LENGTH_SHORT).show();
+//                        System.out.println("0!");
+//                        Intent intent = new Intent(test.this,MainActivity.class);
+//                        startActivity(intent);
+                        break;
+                    case 1:
+//                                                        Toast.makeText(test.this,"真的有这种操作！",Toast.LENGTH_SHORT).show();
+                        System.out.println("1!");
+                        Intent intent1 = new Intent(MainActivity.this,LoginActivity.class);
+                        startActivity(intent1);
+                        finish();
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(int position) {
+
+            }
+
+            @Override
+            public void onTabReselected(int position) {
+
+            }
+        });
+    }
 }

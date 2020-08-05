@@ -27,8 +27,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText key;
 //    @Bind(R.id.login)
     Button login;
-//    String[] mTitles = new String[]{"首页","我的"};
-//    BottomNavigationBar bottomNavigationBar;
+    String[] mTitles = new String[]{"首页","我的"};
+    BottomNavigationBar bottomNavigationBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +36,8 @@ public class LoginActivity extends AppCompatActivity {
         login = findViewById(R.id.login);
         key = findViewById(R.id.password);
         name = findViewById(R.id.username);
-//        bottomNavigationBar = (BottomNavigationBar)findViewById(R.id.login_buttonBar);
-//        initview();
+        bottomNavigationBar = (BottomNavigationBar)findViewById(R.id.login_buttonBar);
+        initview();
 
 //        ButterKnife.bind(this);
         login.setOnClickListener(view->
@@ -87,50 +87,50 @@ public class LoginActivity extends AppCompatActivity {
         }else
             Toast.makeText(this,"用户名或者密码错误",Toast.LENGTH_SHORT).show();
      }
-//    private void initview(){
-//        bottomNavigationBar
-//                .setMode(BottomNavigationBar.MODE_FIXED)
-//                .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC)
-//                .setActiveColor(R.color.colorPrimary)
-//                .setInActiveColor(R.color.orange)
-//                .addItem(new BottomNavigationItem(R.mipmap.ic_tabbar_home_pressed,mTitles[0])
-//                        .setInactiveIcon(ContextCompat.getDrawable(this,R.mipmap.ic_tabbar_home_normal))
-//                )
-//                .addItem(new BottomNavigationItem(R.mipmap.ic_tabbar_my_pressed,mTitles[1])
-//                        .setInactiveIcon(ContextCompat.getDrawable(this,R.mipmap.ic_tabbar_my_normal))
-//                )
-//                .setFirstSelectedPosition(0)
-//                .initialise();
-//        bottomNavigationBar
-//                .setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
-//                    @Override
-//                    public void onTabSelected(int position) {
-//                        switch (position){
-//                            case 0:
-////                                Toast.makeText(MainActivity.this,"已经在此页面！",Toast.LENGTH_SHORT).show();
-////                        System.out.println("0!");
-//                        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-//                        startActivity(intent);
-//
-//                                break;
-//                            case 1:
-//                                                        Toast.makeText(LoginActivity.this,"已经再次页面！",Toast.LENGTH_SHORT).show();
-////                                System.out.println("1!");
-////                                Intent intent1 = new Intent(MainActivity.this,LoginActivity.class);
-////                                startActivity(intent1);
-//                                break;
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onTabUnselected(int position) {
-//
-//                    }
-//
-//                    @Override
-//                    public void onTabReselected(int position) {
-//
-//                    }
-//                });
-//    }
+    private void initview(){
+        bottomNavigationBar
+                .setMode(BottomNavigationBar.MODE_FIXED)
+                .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC)
+                .setActiveColor(R.color.colorPrimary)
+                .setInActiveColor(R.color.orange)
+                .addItem(new BottomNavigationItem(R.mipmap.ic_tabbar_home_pressed,mTitles[0])
+                        .setInactiveIcon(ContextCompat.getDrawable(this,R.mipmap.ic_tabbar_home_normal))
+                )
+                .addItem(new BottomNavigationItem(R.mipmap.ic_tabbar_my_pressed,mTitles[1])
+                        .setInactiveIcon(ContextCompat.getDrawable(this,R.mipmap.ic_tabbar_my_normal))
+                )
+                .setFirstSelectedPosition(1)
+                .initialise();
+        bottomNavigationBar
+                .setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
+                    @Override
+                    public void onTabSelected(int position) {
+                        switch (position){
+                            case 0:
+//                              Toast.makeText(MainActivity.this,"已经在此页面！",Toast.LENGTH_SHORT).show();
+//                              System.out.println("0!");
+                                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                                break;
+                            case 1:
+                                                        Toast.makeText(LoginActivity.this,"已经再次页面！",Toast.LENGTH_SHORT).show();
+//                                System.out.println("1!");
+//                                Intent intent1 = new Intent(MainActivity.this,LoginActivity.class);
+//                                startActivity(intent1);
+                                break;
+                        }
+                    }
+
+                    @Override
+                    public void onTabUnselected(int position) {
+
+                    }
+
+                    @Override
+                    public void onTabReselected(int position) {
+
+                    }
+                });
+    }
  }
